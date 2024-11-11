@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Cooking - Recipe Intelligence</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?display=swap&family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900" />
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        @media (max-width: 768px) {
+            .px-40 { padding-left: 1rem; padding-right: 1rem; }
+            .grid-cols-[repeat(auto-fit,minmax(158px,1fr))] { grid-template-columns: 1fr; }
+        }
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#FFFFFF] group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Navigation -->
+            <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#F4EFE6] px-10 py-3">
+                <div class="flex items-center gap-8">
+                    <div class="flex items-center gap-4 text-[#1C160C]">
+                        <h2 class="text-[#1C160C] text-lg font-bold leading-tight tracking-[-0.015em]">Method Cooking</h2>
+                    </div>
+                    <div class="flex items-center gap-9">
+                        <a class="text-[#1C160C] text-sm font-medium leading-normal hover:text-[#019863] transition-colors" href="#">Vision</a>
+                        <a class="text-[#1C160C] text-sm font-medium leading-normal hover:text-[#019863] transition-colors" href="#">About</a>
+                    </div>
+                </div>
+                <div class="flex flex-1 justify-end gap-8">
+                    <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#019863] text-[#FFFFFF] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#018753] transition-colors">
+                        <span class="truncate">Join Waitlist</span>
+                    </button>
+                </div>
+            </header>
+
+<!-- Main Content Container -->
+            <div class="px-40 flex flex-1 justify-center py-5">
+                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                    <!-- Hero Section -->
+                    <div class="@container">
+                        <div class="@[480px]:px-4 @[480px]:py-3">
+                            <div class="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-[#FFFFFF] @[480px]:rounded-xl min-h-80"
+                                style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 25%), url("https://res.cloudinary.com/dpgh1wz1i/image/upload/v1731185637/IMG_2345_cpdilr.jpg");'>
+                                <div class="flex p-4">
+                                    <p class="text-white tracking-light text-[28px] font-bold leading-tight">Recipe Intelligence for Stress-Free Cooking</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Introduction Text -->
+                    <h1 class="text-[#1C160C] tracking-light text-[32px] font-bold leading-tight px-4 text-left pb-3 pt-6">
+                        The recipe space is cluttered. We're not.
+                    </h1>
+                    <p class="text-[#1C160C] text-base font-normal leading-normal pb-3 pt-1 px-4">
+                        We're designed to be your sidekick in and out of the kitchen. Our platform is the epitome of beauty with brains; featuring smart design and tools to make everyday cooking experiences.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex justify-stretch">
+                        <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 justify-start">
+                            <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-5 bg-[#019863] text-[#FFFFFF] text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#018753] transition-colors">
+                                <span class="truncate">Join Beta Program</span>
+                            </button>
+                            <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-5 bg-[#F4EFE6] text-[#1C160C] text-base font-bold leading-normal tracking-[0.015em] hover:bg-[#E9DFCE] transition-colors">
+                                <span class="truncate">Learn More</span>
+                            </button>
+                        </div>
+                    </div>
+
+<!-- Pain Points Section -->
+<h2 class="text-[#1C160C] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Pain points we solve</h2>
+<div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+    <!-- Timing Chaos -->
+    <div class="flex flex-col gap-3 pb-3">
+        <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" 
+            style='background-image: url("https://res.cloudinary.com/dpgh1wz1i/image/upload/v1731184868/Timing_Chaos_ra54gd.jpg");'>
+        </div>
+        <h3 class="text-[#1C160C] text-base font-medium leading-normal">Timing Chaos</h3>
+        <p class="text-[#A18249] text-sm font-normal leading-normal">Never miss timing or coordination across multiple dishes</p>
+    </div>
+
+    <!-- Missed Steps -->
+    <div class="flex flex-col gap-3 pb-3">
+        <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" 
+            style='background-image: url("https://res.cloudinary.com/dpgh1wz1i/image/upload/v1731184868/Missed_Steps_v6nnbz.jpg");'>
+        </div>
+        <h3 class="text-[#1C160C] text-base font-medium leading-normal">Missed Steps</h3>
+        <p class="text-[#A18249] text-sm font-normal leading-normal">Transform complex instructions into clear, structured steps</p>
+    </div>
+
+    <!-- Cooking Doubts -->
+    <div class="flex flex-col gap-3 pb-3">
+        <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" 
+            style='background-image: url("https://res.cloudinary.com/dpgh1wz1i/image/upload/v1731184868/JPEG_image_lck17b.jpg");'>
+        </div>
+        <h3 class="text-[#1C160C] text-base font-medium leading-normal">Cooking Doubts</h3>
+        <p class="text-[#A18249] text-sm font-normal leading-normal">Charlie, your AI sous-chef, is with you every step of the way</p>
+    </div>
+</div>
+
+<!-- How it Works Section -->
+<h2 class="text-[#1C160C] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">How it works</h2>
+<div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+    <!-- Onboard Recipes -->
+    <div class="flex flex-col gap-3 pb-3">
+        <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" 
+            style='background-image: url("https://res.cloudinary.com/dpgh1wz1i/image/upload/v1731184849/Onboard_mp772n.jpg");'>
+        </div>
+        <div>
+            <p class="text-[#1C160C] text-base font-medium leading-normal">Onboard Your Favorite Recipes</p>
+            <p class="text-[#A18249] text-sm font-normal leading-normal">Import recipes from any source and watch them transform into intelligent guides</p>
+        </div>
+    </div>
+
+    <!-- Plan with Charlie -->
+    <div class="flex flex-col gap-3 pb-3">
+        <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" 
+            style='background-image: url("https://res.cloudinary.com/dpgh1wz1i/image/upload/v1731184850/Plan_with_Charlie_lyfqny.jpg");'>
+        </div>
+        <div>
+            <p class="text-[#1C160C] text-base font-medium leading-normal">Plan with Charlie</p>
+            <p class="text-[#A18249] text-sm font-normal leading-normal">Set your meal time and let Charlie orchestrate your cooking schedule</p>
+        </div>
+    </div>
+
+    <!-- Follow Timeline -->
+    <div class="flex flex-col gap-3 pb-3">
+        <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" 
+            style='background-image: url("https://res.cloudinary.com/dpgh1wz1i/image/upload/v1731184850/Personalized_Timeline_jwjv38.jpg");'>
+        </div>
+        <div>
+            <p class="text-[#1C160C] text-base font-medium leading-normal">Follow Your Personalized Timeline</p>
+            <p class="text-[#A18249] text-sm font-normal leading-normal">Clear, step-by-step guidance with perfect timing across all dishes</p>
+        </div>
+    </div>
+</div>
+
+<!-- Recipe Intelligence Section -->
+                    <h2 class="text-[#1C160C] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Recipe Intelligence</h2>
+                    <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+                        <!-- Charlie AI Sous-Chef -->
+                        <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 flex-col hover:border-[#019863] transition-colors">
+                            <div class="text-[#1C160C]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 8V4H8"/>
+                                    <rect width="16" height="12" x="4" y="8" rx="2"/>
+                                    <path d="M2 14h2"/>
+                                    <path d="M20 14h2"/>
+                                    <path d="M15 13v2"/>
+                                    <path d="M9 13v2"/>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <h2 class="text-[#1C160C] text-base font-bold leading-tight">Charlie: Your AI Sous-Chef</h2>
+                                <p class="text-[#A18249] text-sm font-normal leading-normal">Intelligent assistance and real-time guidance tailored to you</p>
+                            </div>
+                        </div>
+
+                        <!-- Advanced Temporal Awareness -->
+                        <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 flex-col hover:border-[#019863] transition-colors">
+                            <div class="text-[#1C160C]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <h2 class="text-[#1C160C] text-base font-bold leading-tight">Advanced Temporal Awareness</h2>
+                                <p class="text-[#A18249] text-sm font-normal leading-normal">Sophisticated timing coordination across multiple recipes</p>
+                            </div>
+                        </div>
+
+                        <!-- Adaptive Recipe System -->
+                        <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 flex-col hover:border-[#019863] transition-colors">
+                            <div class="text-[#1C160C]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <h2 class="text-[#1C160C] text-base font-bold leading-tight">Adaptive Recipe System</h2>
+                                <p class="text-[#A18249] text-sm font-normal leading-normal">Modify any recipe to fit your schedule, equipment, and preferences</p>
+                            </div>
+                        </div>
+
+                        <!-- Multi-Recipe Orchestration -->
+                        <div class="flex flex-1 gap-3 rounded-lg border border-[#E9DFCE] bg-[#FFFFFF] p-4 flex-col hover:border-[#019863] transition-colors">
+                            <div class="text-[#1C160C]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 7V5c0-1.1.9-2 2-2h2"/>
+                                    <path d="M17 3h2c1.1 0 2 .9 2 2v2"/>
+                                    <path d="M21 17v2c0 1.1-.9 2-2 2h-2"/>
+                                    <path d="M7 21H5c-1.1 0-2-.9-2-2v-2"/>
+                                    <rect x="7" y="7" width="10" height="10" rx="1"/>
+                                </svg>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <h2 class="text-[#1C160C] text-base font-bold leading-tight">Multi-Recipe Orchestration</h2>
+                                <p class="text-[#A18249] text-sm font-normal leading-normal">Cook entire meals with confidence and perfect timing</p>
+                            </div>
+                        </div>
+                    </div>
+
+<!-- Testimonials Section -->
+                    <h2 class="text-[#1C160C] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">What People Say</h2>
+                    <div class="flex flex-col gap-8 overflow-x-hidden bg-[#FFFFFF] p-4">
+                        <!-- Ronald Murray -->
+                        <div class="flex flex-col gap-3 bg-[#FFFFFF]">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-[#F4EFE6] rounded-full size-10 flex items-center justify-center text-[#019863] font-bold">
+                                    RM
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-[#1C160C] text-base font-medium leading-normal">Ronald Murray</p>
+                                    <p class="text-[#A18249] text-sm font-normal leading-normal">Private VIP Chef • Oct 15</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-0.5">
+                                <div class="text-[#019863]">★★★★★</div>
+                            </div>
+                            <p class="text-[#1C160C] text-base font-normal leading-normal">Game changer for big dinner parties. Used to stress about timing 6 different dishes - not anymore. My staff and I can actually enjoy the process now.</p>
+                        </div>
+
+                        <!-- Abrye Redeker -->
+                        <div class="flex flex-col gap-3 bg-[#FFFFFF]">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-[#F4EFE6] rounded-full size-10 flex items-center justify-center text-[#019863] font-bold">
+                                    AR
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-[#1C160C] text-base font-medium leading-normal">Abrye Redeker</p>
+                                    <p class="text-[#A18249] text-sm font-normal leading-normal">Postpartum Meal Specialist • Nov 2</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-0.5">
+                                <div class="text-[#019863]">★★★★★</div>
+                            </div>
+                            <p class="text-[#1C160C] text-base font-normal leading-normal">Love how I can quickly adjust portions and timing for different families. Makes meal prep for new moms so much smoother!</p>
+                        </div>
+
+                        <!-- Stacey Day -->
+                        <div class="flex flex-col gap-3 bg-[#FFFFFF]">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-[#F4EFE6] rounded-full size-10 flex items-center justify-center text-[#019863] font-bold">
+                                    SD
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-[#1C160C] text-base font-medium leading-normal">Stacey Day</p>
+                                    <p class="text-[#A18249] text-sm font-normal leading-normal">Family Cook • Oct 28</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-0.5">
+                                <div class="text-[#019863]">★★★★★</div>
+                            </div>
+                            <p class="text-[#1C160C] text-base font-normal leading-normal">Where was this when I started cooking for my picky eaters?? No more cold sides or overcooked mains. Total lifesaver for family dinners.</p>
+                        </div>
+
+                        <!-- Loren Polster -->
+                        <div class="flex flex-col gap-3 bg-[#FFFFFF]">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-[#F4EFE6] rounded-full size-10 flex items-center justify-center text-[#019863] font-bold">
+                                    LP
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-[#1C160C] text-base font-medium leading-normal">Loren Polster</p>
+                                    <p class="text-[#A18249] text-sm font-normal leading-normal">Remote Living Home Cook • Sept 19</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-0.5">
+                                <div class="text-[#019863]">★★★★★</div>
+                            </div>
+                            <p class="text-[#1C160C] text-base font-normal leading-normal">Being far from stores means I have to get creative with substitutions. This helps me figure out what works. Plus the timing features are perfect for canning days.</p>
+                        </div>
+
+                        <!-- Jérémie Bouguéon -->
+                        <div class="flex flex-col gap-3 bg-[#FFFFFF]">
+                            <div class="flex items-center gap-3">
+                                <div class="bg-[#F4EFE6] rounded-full size-10 flex items-center justify-center text-[#019863] font-bold">
+                                    JB
+                                </div>
+                                <div class="flex-1">
+                                    <p class="text-[#1C160C] text-base font-medium leading-normal">Jérémie Bouguéon</p>
+                                    <p class="text-[#A18249] text-sm font-normal leading-normal">French Cuisine Enthusiast • Oct 7</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-0.5">
+                                <div class="text-[#019863]">★★★★★</div>
+                            </div>
+                            <p class="text-[#1C160C] text-base font-normal leading-normal">Finally tackled my grandmothers complicated coq au vin recipe! The step-by-step timing made it actually enjoyable. Looking forward to trying more complex dishes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
