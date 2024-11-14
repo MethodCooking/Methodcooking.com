@@ -68,6 +68,11 @@
       .mobile-menu.active {
         transform: translateX(0);
       }
+
+      /* Testimonial Carousel */
+      .testimonial-slide {
+        transition: transform 0.5s ease;
+      }
     </style>
 </head>
 <body class="bg-[#FFFFFF]" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
@@ -77,7 +82,7 @@
     <div class="max-w-7xl mx-auto px-4">
         <div class="flex items-center justify-between h-16">
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-[#1C160C]" id="mobile-menu-button">
+            <button class="md:hidden text-[#1C160C]" id="mobile-menu-button" aria-label="Open menu">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -104,7 +109,7 @@
         <div class="p-6">
             <div class="flex justify-between items-center mb-8">
                 <h2 class="text-lg font-bold">Menu</h2>
-                <button class="mobile-menu-close">
+                <button class="mobile-menu-close" aria-label="Close menu">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
@@ -120,7 +125,6 @@
         </div>
     </div>
 </nav>
-
 <!-- Hero Section -->
 <section class="relative overflow-hidden">
     <div class="@container">
@@ -148,7 +152,7 @@
 </section>
 
 <!-- Pain Points Section -->
-<section class="py-12">
+<section class="py-12" id="pain-points">
     <h3 class="text-[#1C160C] text-xl md:text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-6">
         Pain points we solve
     </h3>
@@ -174,7 +178,6 @@
                 </div>
             </div>
 
-            <!-- Repeat similar structure for other pain points -->
             <!-- Missed Steps -->
             <div class="p-4 feature-card">
                 <div class="flex items-start gap-4">
@@ -212,10 +215,9 @@
             </div>
         </div>
     </div>
-
-    <!-- Desktop Layout -->
+    <!-- Desktop Layout for Pain Points -->
     <div class="hidden md:grid md:grid-cols-3 gap-8 px-4">
-        <!-- Desktop Cards -->
+        <!-- Timing Chaos -->
         <div class="feature-card rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
             <div class="aspect-video">
                 <img 
@@ -230,74 +232,538 @@
             </div>
         </div>
 
-        <!-- Repeat for other cards -->
-        <!-- Additional desktop cards would go here -->
+        <!-- Missed Steps -->
+        <div class="feature-card rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <div class="aspect-video">
+                <img 
+                    src="https://res.cloudinary.com/dpgh1wz1i/image/upload/v1731184868/Missed_Steps_v6nnbz.jpg"
+                    alt="Step by step guidance"
+                    class="w-full h-full object-cover"
+                />
+            </div>
+            <div class="p-6">
+                <h4 class="text-[#1C160C] text-lg font-bold mb-2">Missed Steps</h4>
+                <p class="text-[#A18249] text-sm">Transform complex instructions into clear, structured steps</p>
+            </div>
+        </div>
+
+        <!-- Cooking Doubts -->
+        <div class="feature-card rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <div class="aspect-video">
+                <img 
+                    src="https://res.cloudinary.com/dpgh1wz1i/image/upload/v1731184868/JPEG_image_lck17b.jpg"
+                    alt="AI assistance visualization"
+                    class="w-full h-full object-cover"
+                />
+            </div>
+            <div class="p-6">
+                <h4 class="text-[#1C160C] text-lg font-bold mb-2">Cooking Doubts</h4>
+                <p class="text-[#A18249] text-sm">Charlie, your AI sous-chef, is with you every step of the way</p>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- How it Works Section -->
-<section class="py-12 bg-[#F9F6F0]">
-    <!-- Section content similar to Pain Points but with How it Works content -->
-</section>
+<section class="py-12 bg-[#F9F6F0]" id="how-it-works">
+    <h3 class="text-[#1C160C] text-xl md:text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-6">
+        How it works
+    </h3>
 
+    <!-- Mobile Layout -->
+    <div class="block md:hidden">
+        <div class="space-y-6">
+            <!-- Onboard -->
+            <div class="p-4 feature-card">
+                <div class="flex items-start gap-4">
+                    <div class="w-1/3 aspect-video rounded-xl overflow-hidden">
+                        <img 
+                            src="https://res.cloudinary.com/dpgh1wz1i/image/upload/v1731184849/Onboard_mp772n.jpg"
+                            alt="Recipe onboarding"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-[#1C160C] text-lg font-bold mb-2">Onboard Your Favorite Recipes</h4>
+                        <p class="text-[#A18249] text-sm">Import recipes from any source and watch them transform into intelligent guides</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plan with Charlie -->
+            <div class="p-4 feature-card">
+                <div class="flex items-start gap-4">
+                    <div class="w-1/3 aspect-video rounded-xl overflow-hidden">
+                        <img 
+                            src="https://res.cloudinary.com/dpgh1wz1i/image/upload/v1731184850/Plan_with_Charlie_lyfqny.jpg"
+                            alt="Planning with AI"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-[#1C160C] text-lg font-bold mb-2">Plan with Charlie</h4>
+                        <p class="text-[#A18249] text-sm">Set your meal time and let Charlie orchestrate your cooking schedule</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Follow Timeline -->
+            <div class="p-4 feature-card">
+                <div class="flex items-start gap-4">
+                    <div class="w-1/3 aspect-video rounded-xl overflow-hidden">
+                        <img 
+                            src="https://res.cloudinary.com/dpgh1wz1i/image/upload/v1731184850/Personalized_Timeline_jwjv38.jpg"
+                            alt="Personalized timeline"
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-[#1C160C] text-lg font-bold mb-2">Follow Your Personalized Timeline</h4>
+                        <p class="text-[#A18249] text-sm">Clear, step-by-step guidance with perfect timing across all dishes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop Layout -->
+    <div class="hidden md:grid md:grid-cols-3 gap-8 px-4">
+        <!-- Onboard -->
+        <div class="feature-card rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <div class="aspect-video">
+                <img 
+                    src="https://res.cloudinary.com/dpgh1wz1i/image/upload/v1731184849/Onboard_mp772n.jpg"
+                    alt="Recipe onboarding"
+                    class="w-full h-full object-cover"
+                />
+            </div>
+            <div class="p-6">
+                <h4 class="text-[#1C160C] text-lg font-bold mb-2">Onboard Your Favorite Recipes</h4>
+                <p class="text-[#A18249] text-sm">Import recipes from any source and watch them transform into intelligent guides</p>
+            </div>
+        </div>
+
+        <!-- Plan with Charlie -->
+        <div class="feature-card rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <div class="aspect-video">
+                <img 
+                    src="https://res.cloudinary.com/dpgh1wz1i/image/upload/v1731184850/Plan_with_Charlie_lyfqny.jpg"
+                    alt="Planning with AI"
+                    class="w-full h-full object-cover"
+                />
+            </div>
+            <div class="p-6">
+                <h4 class="text-[#1C160C] text-lg font-bold mb-2">Plan with Charlie</h4>
+                <p class="text-[#A18249] text-sm">Set your meal time and let Charlie orchestrate your cooking schedule</p>
+            </div>
+        </div>
+
+        <!-- Follow Timeline -->
+        <div class="feature-card rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+            <div class="aspect-video">
+                <img 
+                    src="https://res.cloudinary.com/dpgh1wz1i/image/upload/v1731184850/Personalized_Timeline_jwjv38.jpg"
+                    alt="Personalized timeline"
+                    class="w-full h-full object-cover"
+                />
+            </div>
+            <div class="p-6">
+                <h4 class="text-[#1C160C] text-lg font-bold mb-2">Follow Your Personalized Timeline</h4>
+                <p class="text-[#A18249] text-sm">Clear, step-by-step guidance with perfect timing across all dishes</p>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Recipe Intelligence Section -->
-<section class="py-12">
+<section class="py-12" id="recipe-intelligence">
     <h3 class="text-[#1C160C] text-xl md:text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-6">
         Recipe Intelligence
     </h3>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
-        <!-- Intelligence Features -->
-        <div class="feature-card p-6 rounded-xl border border-[#E9DFCE] hover:border-[#019863]">
-            <div class="text-[#1C160C] mb-4">
-                <!-- Icon SVG -->
+    <!-- Mobile Layout -->
+    <div class="block md:hidden">
+        <div class="space-y-6">
+            <!-- Charlie: Your AI Sous-Chef -->
+            <div class="p-4 feature-card">
+                <div class="flex items-start gap-4">
+                    <div class="w-1/3 flex items-center justify-center">
+                        <svg class="w-12 h-12 text-[#019863]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 8V4H8"/>
+                            <rect width="16" height="12" x="4" y="8" rx="2"/>
+                            <path d="M2 14h2"/>
+                            <path d="M20 14h2"/>
+                            <path d="M15 13v2"/>
+                            <path d="M9 13v2"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-[#1C160C] text-lg font-bold mb-2">Charlie: Your AI Sous-Chef</h4>
+                        <p class="text-[#A18249] text-sm">Intelligent assistance and real-time guidance tailored to you</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Temporal Awareness -->
+            <div class="p-4 feature-card">
+                <div class="flex items-start gap-4">
+                    <div class="w-1/3 flex items-center justify-center">
+                        <svg class="w-12 h-12 text-[#019863]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-[#1C160C] text-lg font-bold mb-2">Advanced Temporal Awareness</h4>
+                        <p class="text-[#A18249] text-sm">Sophisticated timing coordination across multiple recipes</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Adaptive Recipe System -->
+            <div class="p-4 feature-card">
+                <div class="flex items-start gap-4">
+                    <div class="w-1/3 flex items-center justify-center">
+                        <svg class="w-12 h-12 text-[#019863]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-[#1C160C] text-lg font-bold mb-2">Adaptive Recipe System</h4>
+                        <p class="text-[#A18249] text-sm">Modify any recipe to fit your schedule, equipment, and preferences</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Multi-Recipe Orchestration -->
+            <div class="p-4 feature-card">
+                <div class="flex items-start gap-4">
+                    <div class="w-1/3 flex items-center justify-center">
+                        <svg class="w-12 h-12 text-[#019863]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 7V5c0-1.1.9-2 2-2h2"/>
+                            <path d="M17 3h2c1.1 0 2 .9 2 2v2"/>
+                            <path d="M21 17v2c0 1.1-.9 2-2 2h-2"/>
+                            <path d="M7 21H5c-1.1 0-2-.9-2-2v-2"/>
+                            <rect x="7" y="7" width="10" height="10" rx="1"/>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-[#1C160C] text-lg font-bold mb-2">Multi-Recipe Orchestration</h4>
+                        <p class="text-[#A18249] text-sm">Cook entire meals with confidence and perfect timing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+       <!-- Desktop Layout -->
+    <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+        <!-- Charlie: Your AI Sous-Chef -->
+        <div class="feature-card rounded-xl border border-[#E9DFCE] hover:border-[#019863] bg-white p-6">
+            <div class="text-[#019863] mb-4">
+                <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 8V4H8"/>
+                    <rect width="16" height="12" x="4" y="8" rx="2"/>
+                    <path d="M2 14h2"/>
+                    <path d="M20 14h2"/>
+                    <path d="M15 13v2"/>
+                    <path d="M9 13v2"/>
+                </svg>
             </div>
             <h4 class="text-[#1C160C] text-lg font-bold mb-2">Charlie: Your AI Sous-Chef</h4>
             <p class="text-[#A18249] text-sm">Intelligent assistance and real-time guidance tailored to you</p>
         </div>
-        
-        <!-- Additional feature cards -->
+
+        <!-- Advanced Temporal Awareness -->
+        <div class="feature-card rounded-xl border border-[#E9DFCE] hover:border-[#019863] bg-white p-6">
+            <div class="text-[#019863] mb-4">
+                <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                </svg>
+            </div>
+            <h4 class="text-[#1C160C] text-lg font-bold mb-2">Advanced Temporal Awareness</h4>
+            <p class="text-[#A18249] text-sm">Sophisticated timing coordination across multiple recipes</p>
+        </div>
+
+        <!-- Adaptive Recipe System -->
+        <div class="feature-card rounded-xl border border-[#E9DFCE] hover:border-[#019863] bg-white p-6">
+            <div class="text-[#019863] mb-4">
+                <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                </svg>
+            </div>
+            <h4 class="text-[#1C160C] text-lg font-bold mb-2">Adaptive Recipe System</h4>
+            <p class="text-[#A18249] text-sm">Modify any recipe to fit your schedule, equipment, and preferences</p>
+        </div>
+
+        <!-- Multi-Recipe Orchestration -->
+        <div class="feature-card rounded-xl border border-[#E9DFCE] hover:border-[#019863] bg-white p-6">
+            <div class="text-[#019863] mb-4">
+                <svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 7V5c0-1.1.9-2 2-2h2"/>
+                    <path d="M17 3h2c1.1 0 2 .9 2 2v2"/>
+                    <path d="M21 17v2c0 1.1-.9 2-2 2h-2"/>
+                    <path d="M7 21H5c-1.1 0-2-.9-2-2v-2"/>
+                    <rect x="7" y="7" width="10" height="10" rx="1"/>
+                </svg>
+            </div>
+            <h4 class="text-[#1C160C] text-lg font-bold mb-2">Multi-Recipe Orchestration</h4>
+            <p class="text-[#A18249] text-sm">Cook entire meals with confidence and perfect timing</p>
+        </div>
+    </div>
     </div>
 </section>
 
+
 <!-- Testimonials Section -->
-<section class="py-12 bg-[#F9F6F0]">
+<section class="py-12 bg-[#F9F6F0]" id="testimonials">
     <h3 class="text-[#1C160C] text-xl md:text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-6">
         What People Say
     </h3>
 
-    <!-- Mobile Testimonial Carousel -->
+    <!-- Mobile Layout -->
     <div class="block md:hidden">
-        <div class="testimonial-carousel overflow-hidden">
+        <div class="testimonial-carousel relative overflow-hidden px-4">
             <div class="flex transition-transform duration-300">
-                <!-- Testimonial Cards -->
-                <!-- Will be controlled by JavaScript -->
+                <!-- Ronald Murray -->
+                <div class="flex-shrink-0 w-full">
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-[#F4EFE6] rounded-full size-10 flex items-center justify-center text-[#019863] font-bold">
+                                RM
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-[#1C160C] text-base font-medium">Ronald Murray</p>
+                                <p class="text-[#A18249] text-sm">Private VIP Chef • Oct 15</p>
+                            </div>
+                        </div>
+                        <div class="flex text-[#019863] mb-3">★★★★★</div>
+                        <p class="text-[#1C160C] text-base">Game changer for big dinner parties. Used to stress about timing 6 different dishes - not anymore. My staff and I can actually enjoy the process now.</p>
+                    </div>
+                </div>
+
+                <!-- Abrye Redeker -->
+                <div class="flex-shrink-0 w-full">
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-[#F4EFE6] rounded-full size-10 flex items-center justify-center text-[#019863] font-bold">
+                                AR
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-[#1C160C] text-base font-medium">Abrye Redeker</p>
+                                <p class="text-[#A18249] text-sm">Postpartum Meal Specialist • Nov 2</p>
+                            </div>
+                        </div>
+                        <div class="flex text-[#019863] mb-3">★★★★★</div>
+                        <p class="text-[#1C160C] text-base">Love how I can quickly adjust portions and timing for different families. Makes meal prep for new moms so much smoother!</p>
+                    </div>
+                </div>
+
+                <!-- Additional testimonials in carousel format -->
+                <!-- Stacey Day -->
+                <div class="flex-shrink-0 w-full">
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="bg-[#F4EFE6] rounded-full size-10 flex items-center justify-center text-[#019863] font-bold">
+                                SD
+                            </div>
+                            <div class="flex-1">
+                                <p class="text-[#1C160C] text-base font-medium">Stacey Day</p>
+                                <p class="text-[#A18249] text-sm">Family Cook • Oct 28</p>
+                            </div>
+                        </div>
+                        <div class="flex text-[#019863] mb-3">★★★★★</div>
+                        <p class="text-[#1C160C] text-base">Where was this when I started cooking for my picky eaters?? No more cold sides or overcooked mains. Total lifesaver for family dinners.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!-- Carousel Navigation -->
-        <div class="flex justify-center gap-2 mt-4">
-            <button class="w-2 h-2 rounded-full bg-[#019863]"></button>
-            <button class="w-2 h-2 rounded-full bg-[#E9DFCE]"></button>
-            <button class="w-2 h-2 rounded-full bg-[#E9DFCE]"></button>
+
+            <!-- Carousel Navigation -->
+            <div class="flex justify-center gap-2 mt-6">
+                <button class="w-2 h-2 rounded-full bg-[#019863] carousel-dot" data-index="0" aria-label="View testimonial 1"></button>
+                <button class="w-2 h-2 rounded-full bg-[#E9DFCE] carousel-dot" data-index="1" aria-label="View testimonial 2"></button>
+                <button class="w-2 h-2 rounded-full bg-[#E9DFCE] carousel-dot" data-index="2" aria-label="View testimonial 3"></button>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 rounded-full p-2 shadow-md carousel-prev" aria-label="Previous testimonial">
+                <svg class="w-6 h-6 text-[#1C160C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 rounded-full p-2 shadow-md carousel-next" aria-label="Next testimonial">
+                <svg class="w-6 h-6 text-[#1C160C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
         </div>
     </div>
 
-    <!-- Desktop Grid Layout -->
+   <!-- Desktop Layout -->
     <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
-        <!-- Testimonial Cards -->
+        <!-- Ronald Murray -->
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="bg-[#F4EFE6] rounded-full size-10 flex items-center justify-center text-[#019863] font-bold">
+                    RM
+                </div>
+                <div class="flex-1">
+                    <p class="text-[#1C160C] text-base font-medium">Ronald Murray</p>
+                    <p class="text-[#A18249] text-sm">Private VIP Chef • Oct 15</p>
+                </div>
+            </div>
+            <div class="flex text-[#019863] mb-3">★★★★★</div>
+            <p class="text-[#1C160C] text-base">Game changer for big dinner parties. Used to stress about timing 6 different dishes - not anymore. My staff and I can actually enjoy the process now.</p>
+        </div>
+
+        <!-- Abrye Redeker -->
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="bg-[#F4EFE6] rounded-full size-10 flex items-center justify-center text-[#019863] font-bold">
+                    AR
+                </div>
+                <div class="flex-1">
+                    <p class="text-[#1C160C] text-base font-medium">Abrye Redeker</p>
+                    <p class="text-[#A18249] text-sm">Postpartum Meal Specialist • Nov 2</p>
+                </div>
+            </div>
+            <div class="flex text-[#019863] mb-3">★★★★★</div>
+            <p class="text-[#1C160C] text-base">Love how I can quickly adjust portions and timing for different families. Makes meal prep for new moms so much smoother!</p>
+        </div>
+
+        <!-- Stacey Day -->
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="flex items-center gap-3 mb-4">
+                <div class="bg-[#F4EFE6] rounded-full size-10 flex items-center justify-center text-[#019863] font-bold">
+                    SD
+                </div>
+                <div class="flex-1">
+                    <p class="text-[#1C160C] text-base font-medium">Stacey Day</p>
+                    <p class="text-[#A18249] text-sm">Family Cook • Oct 28</p>
+                </div>
+            </div>
+            <div class="flex text-[#019863] mb-3">★★★★★</div>
+            <p class="text-[#1C160C] text-base">Where was this when I started cooking for my picky eaters?? No more cold sides or overcooked mains. Total lifesaver for family dinners.</p>
+        </div>
     </div>
 </section>
-
 <!-- JavaScript for Interactions -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Mobile Menu Functionality
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Menu Functionality
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('translate-x-0');
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('translate-x-0');
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+        mobileMenu.classList.remove('translate-x-0');
+    });
+
+    // Testimonial Carousel Functionality
+    const carousel = document.querySelector('.testimonial-carousel');
+    if (carousel) {
+        const carouselTrack = carousel.querySelector('.flex');
+        const slides = carousel.querySelectorAll('.flex-shrink-0');
+        const dots = carousel.querySelectorAll('.carousel-dot');
+        const prevButton = carousel.querySelector('.carousel-prev');
+        const nextButton = carousel.querySelector('.carousel-next');
+        let currentIndex = 0;
+
+        // Update carousel position
+        function updateCarousel() {
+            carouselTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('bg-[#019863]', index === currentIndex);
+                dot.classList.toggle('bg-[#E9DFCE]', index !== currentIndex);
+            });
+        }
+
+        // Next/Previous buttons
+        nextButton?.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel();
         });
 
-        m
+        prevButton?.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateCarousel();
+        });
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+            });
+        });
+
+        // Touch/Swipe functionality
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carousel.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, false);
+
+        carousel.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, false);
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swipe left
+                    currentIndex = Math.min(currentIndex + 1, slides.length - 1);
+                } else {
+                    // Swipe right
+                    currentIndex = Math.max(currentIndex - 1, 0);
+                }
+                updateCarousel();
+            }
+        }
+    }
+
+    // Feature Card Animations
+    const cards = document.querySelectorAll('.feature-card');
+    
+    const observerOptions = {
+        threshold: 0.2,
+        rootMargin: '0px'
+    };
+
+    const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                cardObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    cards.forEach(card => {
+        cardObserver.observe(card);
+    });
+
+    // Loading State Management
+    window.addEventListener('load', () => {
+        document.querySelectorAll('.skeleton-loading').forEach(element => {
+            element.classList.remove('skeleton-loading');
+        });
+    });
+});
+</script>
+
+</body>
+</html>
